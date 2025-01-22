@@ -4,21 +4,21 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/<ton-utilisateur>/<ton-depot>.git'
+                git 'https://github.com/HugoCagninacciBerthier/Jenkins.git'
             }
         }
  
         stage('Compile') {
             steps {
                 echo 'Compilation du code source'
-                sh 'javac -d out src/calculator.java'
+                sh 'javac -d out Source/calculator.java'
             }
         }
  
         stage('Run Unit Tests') {
             steps {
                 echo 'Exécution des tests unitaires...'
-                sh 'javac -d out -cp "out:libs/*" tests/CalculatorTest.java'
+                sh 'javac -d out -cp "out:libs/*" Test/CalculatorTest.java'
                 sh 'java -cp "out:libs/*" org.junit.runner.JUnitCore CalculatorTest'
             }
         }
