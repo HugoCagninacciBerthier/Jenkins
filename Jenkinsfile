@@ -5,7 +5,7 @@ pipeline {
             steps {
                 git url: 'https://github.com/HugoCagninacciBerthier/Jenkins.git', 
                     branch: 'main', 
-                    credentialsId: 'github-token1'
+                    credentialsId: 'Github-token1'
             }
         }
     }
