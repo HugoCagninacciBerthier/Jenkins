@@ -1,10 +1,20 @@
 pipeline {
     agent any
+
     stages {
-        stage('Checkout') {
+        stage('Build') {
             steps {
-                git url: 'https://github.com/HugoCagninacciBerthier/Jenkins.git', 
-                    branch: 'main', 
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
             }
         }
     }
