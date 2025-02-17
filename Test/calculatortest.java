@@ -28,5 +28,6 @@ public class CalculatorTest {
     @Test
     public void testDivideByZero() {
         assertThrows(ArithmeticException.class, () -> calculator.divide(1, 0));
+//Commentaire
     }
 }
